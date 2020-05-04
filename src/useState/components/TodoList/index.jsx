@@ -13,7 +13,7 @@ ToDoList.defaultProps = {
 function ToDoList(props) {
     const {todos,onToDoClick} = props;
     function handleClick(id) {
-        onToDoClick(id); // Truyền thằng vừa click vào props để APP JS bắt được
+        onToDoClick(id);
     }
     return (
         <div>

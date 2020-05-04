@@ -5,6 +5,7 @@ import ColorBox from './useState/components/ColorBox';
 import ToDoList from './useState/components/TodoList';
 import TodoForm from './useState/components/TodoForm';
 import PostList from './useEffect/components/PostList';
+import SearchDebounce from './useRef/components/SearchDebounce';
 
 
 /* USE STATE
@@ -46,10 +47,14 @@ function App() {
  */
 
 function App() {
+  function handleSearchDebounce(value){
+    console.log(value);
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <PostList/>
+        {/* <PostList/> */}
+        <SearchDebounce onSubmit={handleSearchDebounce}/>
       </header>
     </div>
   );
