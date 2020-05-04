@@ -1,26 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import ColorBox from './useState/components/ColorBox';
+import ToDoList from './useState/components/TodoList';
+import TodoForm from './useState/components/TodoForm';
+import PostList from './useEffect/components/PostList';
+
+
+/* USE STATE
+function App() {
+  const [todoList, setTodoList] = useState([
+    { id: 1, title: 'ABC' },
+    { id: 2, title: 'DEF' },
+    { id: 3, title: 'GHK' }
+  ])
+  function handleTodoClick(id){
+    // Option 1
+    setTodoList(todoList.filter(x=> x.id !== id));
+
+    // Option 2
+    // const getIndex = todoList.findIndex(x=> x.id === id);
+    // if(getIndex < 0) return;
+    // const newTodoList = [...todoList];
+    // newTodoList.splice(getIndex,1);
+    // setTodoList(newTodoList);
+  }
+  function handleTodoForm(item) {
+    // console.log(item);
+    const newToDo = [
+      {id: todoList.length + 1,...item},
+      ...todoList,
+    ]
+    setTodoList(newToDo);
+  }
+  return (
+    <div className="App">
+      <header className="App-header">
+        <ColorBox />
+        <TodoForm onSubmit={handleTodoForm}/>
+        <ToDoList todos = {todoList} onToDoClick={handleTodoClick}/>
+      </header>
+    </div>
+  );
+}
+ */
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <PostList/>
       </header>
     </div>
   );
 }
-
 export default App;
