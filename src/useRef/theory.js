@@ -1,10 +1,3 @@
 /*
-    - Immutability (bất biến): không có khả năng thay đổi trạng thái bên trong của object nào đấy (Performance tốt hơn)
-        + Concat()
-        + [...a]
-        + Object.assign()
-        + slice()
-    - mutability (đột biến): có khả năng thay đổi trạng thái
-        + Sort()
-        + 
+    - UseRef: tạo ra 1 object, object đó sẽ không thay đổi giữa những lần render
 */

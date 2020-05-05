@@ -46,15 +46,38 @@ function App() {
 }
  */
 
+/* USE EFFECT
 function App() {
-  function handleSearchDebounce(value){
-    console.log(value);
-  }
+ return (
+   <div className="App">
+     <header className="App-header">
+        <PostList/>
+     </header>
+   </div>
+ );
+}
+export default App;
+*/
+
+//  function App() {
+//   function handleSearchDebounce(value){
+//     console.log(value);
+//   }
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <SearchDebounce onSubmit={handleSearchDebounce}/>
+//       </header>
+//     </div>
+//   );
+// }
+// export default App;
+
+
+function App() {
   return (
     <div className="App">
       <header className="App-header">
-        {/* <PostList/> */}
-        <SearchDebounce onSubmit={handleSearchDebounce}/>
       </header>
     </div>
   );
